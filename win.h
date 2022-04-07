@@ -21,17 +21,17 @@ public slots:
 	void add_one()
 	{
 		QString str = text();
-		int r = str.toInt();
+        int r = str.toInt(); // перевод введенного числа (строки) в int
 
-		if (r != 0 && r % 5 == 0)
+        if (r != 0 && r % 5 == 0) // сигнал вызывается, если число кратно 5
 		{
 			emit tick_signal();
 		}
 
-		r++;
+        r++; // и в графе "счёт по 5" прибавляется единица
 
 		str.setNum(r);
-		setText(str);
+        setText(str); // вывод результата
 	}
 };
 
@@ -40,13 +40,13 @@ class Win : public QWidget
 	Q_OBJECT
 
 protected:
-	QLabel *label1, *label2;
-	Counter *edit1, *edit2;
-	QPushButton *calcbutton;
+    QLabel *label1, *label2; // надписи
+    Counter *edit1, *edit2; // числа
+    QPushButton *calcbutton; // кнопки
 	QPushButton *exitbutton;
 
 public:
-	Win(QWidget *parent = nullptr);
+    Win(QWidget *parent = nullptr); // окно
 };
 
 #endif // WIN_H
