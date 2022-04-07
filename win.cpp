@@ -3,7 +3,7 @@
 Win::Win(QWidget *parent)
 	: QWidget(parent)
 {
-	setWindowTitle("Счетчик");
+    setWindowTitle("Счетчик"); // заголовок окна
 
 	label1 = new QLabel("Cчет по 1", this);
 	label2 = new QLabel("Cчет по 5", this);
