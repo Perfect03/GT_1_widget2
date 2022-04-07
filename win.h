@@ -1,6 +1,12 @@
 ﻿#ifndef WIN_H
 #define WIN_H
 
+#include <QBoxLayout>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QWidget>
+
 class Counter : public QLineEdit
 {
 	Q_OBJECT
